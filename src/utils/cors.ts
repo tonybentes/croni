@@ -22,7 +22,7 @@ const initMiddleware = (middleware: Middleware) => (req: NextApiRequest, res: Ne
 // You can read more about the available options here: https://github.com/expressjs/cors#configuration-options
 const cors = initMiddleware(
   Cors({
-    origin: '*',
+    origin: true,
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
   })
