@@ -42,11 +42,8 @@ export function AuthSplitLayout({ sx, section, children }: AuthSplitLayoutProps)
             signIn: false,
             account: false,
             purchase: false,
-            contacts: false,
             searchbar: false,
-            workspaces: false,
             menuButton: false,
-            localization: false,
             notifications: false,
           }}
           slots={{
