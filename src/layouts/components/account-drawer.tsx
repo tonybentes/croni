@@ -47,7 +47,7 @@ export function AccountDrawer({ data = [], sx, ...other }: AccountDrawerProps) {
 
   const router = useRouter();
 
-  const pathname = usePathname();
+  const pathname = usePathname() as string;
 
   const { user } = useMockedUser();
 
