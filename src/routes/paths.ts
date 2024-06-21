@@ -38,6 +38,7 @@ export const paths = {
   },
   // DASHBOARD
   dashboard: {
+    chat: `${ROOTS.DASHBOARD}/chat`,
     root: ROOTS.DASHBOARD,
     two: `${ROOTS.DASHBOARD}/two`,
     three: `${ROOTS.DASHBOARD}/three`,

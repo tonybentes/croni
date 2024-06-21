@@ -45,6 +45,7 @@
     "dayjs": "^1.11.11",
     "framer-motion": "^11.2.10",
     "jsonwebtoken": "^9.0.2",
+    "lodash": "^4.17.21",
     "next": "^14.2.4",
     "nprogress": "^0.2.0",
     "react": "^18.3.1",
@@ -53,12 +54,15 @@
     "simplebar-react": "^3.2.5",
     "stylis": "^4.3.2",
     "stylis-plugin-rtl": "^2.1.1",
+    "swr": "^2.2.5",
+    "yet-another-react-lightbox": "^3.20.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
     "@types/autosuggest-highlight": "^3.2.3",
     "@types/cors": "^2.8.17",
+    "@types/lodash": "^4.17.5",
     "@types/node": "^20.14.2",
     "@types/nprogress": "^0.2.3",
     "@types/react": "^18.3.3",
