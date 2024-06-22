@@ -5,6 +5,7 @@ import type { Theme, SxProps, Breakpoint } from '@mui/material/styles';
 import Alert from '@mui/material/Alert';
 
 import { useBoolean } from 'src/hooks/use-boolean';
+import { useResponsive } from 'src/hooks/use-responsive';
 
 import { Section } from './section';
 import { Main, Content } from './main';
@@ -25,6 +26,7 @@ export type AuthSplitLayoutProps = {
 
 export function AuthSplitLayout({ sx, section, children }: AuthSplitLayoutProps) {
   const mobileNavOpen = useBoolean();
+  const sizeScreenMD = useResponsive('between', 'xs', 'md');
 
   const layoutQuery: Breakpoint = 'md';
   return (
@@ -75,8 +77,30 @@ export function AuthSplitLayout({ sx, section, children }: AuthSplitLayoutProps)
           imgUrl={section?.imgUrl}
           subtitle={section?.subtitle}
         />
-        <Content layoutQuery={layoutQuery}>{children}</Content>
+        <Content
+          layoutQuery={layoutQuery}
+          sx={sizeScreenMD ? styledContent.containerMb : styledContent.container}
+        >
+          {children}
+        </Content>
       </Main>
     </LayoutSection>
   );
 }
+
+export const styledContent = {
+  container: {
+    borderTopLeftRadius: '20px',
+    borderBottomLeftRadius: '20px',
+    zIndex: 7,
+    position: 'relative',
+    boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px;',
+  },
+  containerMb: {
+    borderTopLeftRadius: '20px',
+    borderTopRightRadius: '20px',
+    zIndex: 7,
+    position: 'relative',
+    boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px;',
+  },
+};

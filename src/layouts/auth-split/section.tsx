@@ -51,7 +51,7 @@ export function Section({
         px: 3,
         pb: 4,
         width: 1,
-        maxWidth: 640,
+        maxWidth: '67%',
         display: 'none',
         position: 'relative',
         pt: 'var(--layout-header-desktop-height + 20vh)',
@@ -93,7 +93,7 @@ export function Section({
               textAlign: 'center',
               mt: 2,
               ml: 8,
-              width: '70%',
+              width: '74%',
             }}
           >
             {subtitle}

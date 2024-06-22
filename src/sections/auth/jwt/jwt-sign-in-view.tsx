@@ -77,7 +77,7 @@ export function JwtSignInView() {
 
   const renderHead = (
     <Stack spacing={1.5} sx={{ mb: 5 }}>
-      <Typography variant="h5">Faça login em sua conta</Typography>
+      <Typography variant="h5">Bem-vindo</Typography>
     </Stack>
   );
 
@@ -102,6 +102,14 @@ export function JwtSignInView() {
             ),
           }}
         />
+        <Stack flexDirection="row" justifyContent="space-between">
+          <Typography variant="caption" sx={styledForm.typography}>
+            Esqueci minha senha
+          </Typography>
+          <Typography variant="caption" sx={styledForm.typography}>
+            Não tenho cadastro
+          </Typography>
+        </Stack>
       </Stack>
 
       <LoadingButton
@@ -122,11 +130,11 @@ export function JwtSignInView() {
     <>
       {renderHead}
 
-      <Alert severity="info" sx={{ mb: 3 }}>
+      {/*  <Alert severity="info" sx={{ mb: 3 }}>
         Use <strong>{defaultValues.email}</strong>
         {' com a senha '}
         <strong>{defaultValues.password}</strong>
-      </Alert>
+      </Alert> */}
 
       {!!errorMsg && (
         <Alert severity="error" sx={{ mb: 3 }}>
@@ -140,3 +148,10 @@ export function JwtSignInView() {
     </>
   );
 }
+
+export const styledForm = {
+  typography: {
+    color: '#919EAB',
+    '&:hover': { textDecoration: 'underline', cursor: 'pointer' },
+  },
+};
