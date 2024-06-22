@@ -92,10 +92,10 @@ export function NotificationItem({ notification }: { notification: NotificationI
   const friendAction = (
     <Stack spacing={1} direction="row" sx={{ mt: 1.5 }}>
       <Button size="small" variant="contained">
-        Accept
+        Aceitar
       </Button>
       <Button size="small" variant="outlined">
-        Decline
+        Recusar
       </Button>
     </Stack>
   );
@@ -112,12 +112,12 @@ export function NotificationItem({ notification }: { notification: NotificationI
         }}
       >
         {reader(
-          `<p><strong>@Jaydon Frankie</strong> feedback by asking questions or just leave a note of appreciation.</p>`
+          `<p><strong>@Doutor João</strong> não se esqueça de informar todos os seus sintomas.</p>`
         )}
       </Box>
 
       <Button size="small" variant="contained">
-        Reply
+        Repetir
       </Button>
     </Stack>
   );
@@ -141,7 +141,7 @@ export function NotificationItem({ notification }: { notification: NotificationI
           disableTypography
           primary={
             <Typography variant="subtitle2" component="div" sx={{ color: 'text.secondary' }} noWrap>
-              design-suriname-2015.mp3
+              calmaria-2015.mp3
             </Typography>
           }
           secondary={
@@ -168,7 +168,7 @@ export function NotificationItem({ notification }: { notification: NotificationI
         />
 
         <Button size="small" variant="outlined">
-          Download
+          Baixar
         </Button>
       </Stack>
     </Stack>
@@ -215,8 +215,8 @@ export function NotificationItem({ notification }: { notification: NotificationI
         {notification.type === 'friend' && friendAction}
         {notification.type === 'project' && projectAction}
         {notification.type === 'file' && fileAction}
-        {notification.type === 'tags' && tagsAction}
-        {notification.type === 'payment' && paymentAction}
+        {/* {notification.type === 'tags' && tagsAction} */}
+        {/* {notification.type === 'payment' && paymentAction} */}
       </Stack>
     </ListItemButton>
   );

@@ -55,47 +55,45 @@ export const _contacts = [...Array(20)].map((_, index) => {
 export const _notifications = [...Array(9)].map((_, index) => ({
   id: _mock.id(index),
   avatarUrl: [
-    _mock.image.avatar(1),
-    _mock.image.avatar(2),
-    _mock.image.avatar(3),
-    _mock.image.avatar(4),
-    _mock.image.avatar(5),
+    _mock.image.avatar(24),
+    _mock.image.avatar(24),
+    _mock.image.avatar(24),
+    _mock.image.avatar(24),
+    _mock.image.avatar(24),
     null,
     null,
     null,
     null,
     null,
   ][index],
-  type: ['friend', 'project', 'file', 'tags', 'payment', 'order', 'chat', 'mail', 'delivery'][
-    index
-  ],
+  type: ['friend', 'project', 'file', 'tags', 'payment', 'order', 'chat', 'mail', 'delivery'][index],
   category: [
-    'Communication',
-    'Project UI',
-    'File manager',
-    'File manager',
-    'File manager',
-    'Order',
-    'Order',
-    'Communication',
-    'Communication',
+    "Administração de Tratamento",
+    "Consultas e Exames",
+    "Atividades de Bem-Estar",
+    "Planejamento e Educação em Saúde",
+    "Gestão de Estresse e Bem-Estar Emocional",
   ][index],
   isUnRead: _mock.boolean(index),
   createdAt: _mock.time(index),
   title:
-    (index === 0 && `<p><strong>Deja Brady</strong> sent you a friend request</p>`) ||
+    (index === 0 && `<p><strong>Tomar Medicamentos da Manhã</strong></p>`) ||
     (index === 1 &&
-      `<p><strong>Jayvon Hull</strong> mentioned you in <strong><a href='#'>Minimal UI</a></strong></p>`) ||
+      `<p><strong>Consulta com Oncologista</strong></p>`) ||
     (index === 2 &&
-      `<p><strong>Lainey Davidson</strong> added file to <strong><a href='#'>File manager</a></strong></p>`) ||
+      `<p><strong>Caminhada Matinal</strong></p>`) ||
     (index === 3 &&
-      `<p><strong>Angelique Morse</strong> added new tags to <strong><a href='#'>File manager<a/></strong></p>`) ||
+      `<p><strong>Reunião com Nutricionista</strong></p>`) ||
     (index === 4 &&
-      `<p><strong>Giana Brandt</strong> request a payment of <strong>$200</strong></p>`) ||
-    (index === 5 && `<p>Your order is placed waiting for shipping</p>`) ||
-    (index === 6 && `<p>Delivery processing your order is being shipped</p>`) ||
-    (index === 7 && `<p>You have new message 5 unread messages</p>`) ||
-    (index === 8 && `<p>You have new mail`) ||
+      `<p><strong>Sessão de Meditação</strong></p>`) ||
+    (index === 5 &&
+      `<p><strong>Administrar Medicamentos e Discutir Efeitos Colaterais</strong></p>`) ||
+    (index === 6 &&
+      `<p><strong>Exame de Sangue</strong></p>`) ||
+    (index === 7 &&
+      `<p><strong>Reunião do Grupo de Apoio</strong></p>`) ||
+    (index === 8 &&
+      `<p><strong>Consulta com Psicólogo</strong></p>`) ||
     '',
 }));
 

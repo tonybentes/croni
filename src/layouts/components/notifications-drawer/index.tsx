@@ -31,9 +31,9 @@ import type { NotificationItemProps } from './notification-item';
 // ----------------------------------------------------------------------
 
 const TABS = [
-  { value: 'all', label: 'All', count: 22 },
-  { value: 'unread', label: 'Unread', count: 12 },
-  { value: 'archived', label: 'Archived', count: 10 },
+  { value: 'all', label: 'Todos', count: 22 },
+  { value: 'unread', label: 'Não lidas', count: 12 },
+  { value: 'archived', label: 'Arquivadas', count: 10 },
 ];
 
 // ----------------------------------------------------------------------
@@ -62,7 +62,7 @@ export function NotificationsDrawer({ data = [], sx, ...other }: NotificationsDr
   const renderHead = (
     <Stack direction="row" alignItems="center" sx={{ py: 2, pl: 2.5, pr: 1, minHeight: 68 }}>
       <Typography variant="h6" sx={{ flexGrow: 1 }}>
-        Notifications
+        Notificações
       </Typography>
 
       {!!totalUnRead && (
