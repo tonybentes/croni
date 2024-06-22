@@ -68,6 +68,16 @@ export const _nativeL = [
   2405, 3127, 6843, 4672, 6995, 6053, 5192, 9686,
 ];
 
+export const _videos = [
+  "https://www.youtube.com/watch?v=MPO16ik3AQU",
+  "https://www.youtube.com/watch?v=DMUWHyBxDDY",
+  "https://www.youtube.com/watch?v=QKLdgho4qKQ",
+  "https://www.youtube.com/watch?v=cO-tZHfNVbA",
+  "https://www.youtube.com/watch?v=ptniMV9WTZk",
+  "https://www.youtube.com/watch?v=f2b9nOTpC9k",
+  "https://www.youtube.com/watch?v=l5sOayRsXu8",
+]
+
 export const _fullAddress = [
   `19034 Verna Unions Apt. 164 - Honolulu, RI / 87535`,
   `1147 Rohan Drive Suite 819 - Burlington, VT / 82021`,

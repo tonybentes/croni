@@ -8,6 +8,7 @@ import {
   _roles,
   _prices,
   _emails,
+  _videos,
   _ratings,
   _nativeS,
   _nativeM,
@@ -44,6 +45,7 @@ export const _mock = {
   boolean: (index: number) => _booleans[index],
   role: (index: number) => _roles[index],
   // Text
+  videos: (index: number) => _videos[index],
   courseNames: (index: number) => _courseNames[index],
   fileNames: (index: number) => _fileNames[index],
   eventNames: (index: number) => _eventNames[index],
