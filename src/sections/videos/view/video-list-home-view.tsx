@@ -31,6 +31,7 @@ export function VideoListHomeView({ videos }: Props) {
           Cuidado e Bem estar
         </Typography>
       </Stack>
+
       <VideoList videos={videos} />
     </DashboardContent>
   );
