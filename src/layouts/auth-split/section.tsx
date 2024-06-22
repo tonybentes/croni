@@ -70,13 +70,13 @@ export function Section({
           component="img"
           alt="Dashboard illustration"
           src={logoCroni.src}
-          sx={{ width: '80px', aspectRatio: '4/1', objectFit: 'cover', height: '120px' }}
+          sx={{ width: '100px', aspectRatio: '4/1', objectFit: 'cover', height: '150px' }}
         />
         <Box
           component="img"
           alt="Dashboard illustration"
           src={imgUrl}
-          sx={{ width: '50%', aspectRatio: '4/1.5', objectFit: 'cover', height: 'auto' }}
+          sx={{ width: '80%', aspectRatio: '4/1.5', objectFit: 'cover', height: 'auto' }}
         />
       </Box>
       <div>
@@ -88,6 +88,7 @@ export function Section({
 
         {subtitle && (
           <Typography
+            variant="h4"
             sx={{
               color: 'text.secondary',
               textAlign: 'center',

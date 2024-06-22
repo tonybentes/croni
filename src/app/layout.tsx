@@ -6,6 +6,8 @@ import type { Viewport } from 'next';
 
 import Head from 'next/head';
 
+import { AlertProvider } from 'src/hooks/use-alert';
+
 import { CONFIG } from 'src/config-global';
 import { primary } from 'src/theme/core/palette';
 import { ThemeProvider } from 'src/theme/theme-provider';
@@ -47,11 +49,13 @@ export default async function RootLayout({ children }: Props) {
             caches={CONFIG.isStaticExport ? 'localStorage' : 'cookie'}
           >
             <ThemeProvider>
-              <MotionLazy>
-                <ProgressBar />
-                <SettingsDrawer />
-                {children}
-              </MotionLazy>
+              <AlertProvider>
+                <MotionLazy>
+                  <ProgressBar />
+                  <SettingsDrawer />
+                  {children}
+                </MotionLazy>
+              </AlertProvider>
             </ThemeProvider>
           </SettingsProvider>
         </AuthProvider>
