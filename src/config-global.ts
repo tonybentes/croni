@@ -3,6 +3,9 @@ import { paths } from 'src/routes/paths';
 import packageJson from '../package.json';
 
 // ----------------------------------------------------------------------
+export const HOST_API =
+  process.env.NODE_ENV === 'production' ? process.env.PRODUCTION_API : process.env.DEV_API;
+
 
 export type ConfigValue = {
   isStaticExport: boolean;

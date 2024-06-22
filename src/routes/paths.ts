@@ -42,6 +42,10 @@ export const paths = {
     treatment: `${ROOTS.DASHBOARD}/treatment`,
     calendar: `${ROOTS.DASHBOARD}/calendar`,
     chat: `${ROOTS.DASHBOARD}/chat`,
-    tips: `${ROOTS.DASHBOARD}/tips`,
+    tips: {
+      root: `${ROOTS.DASHBOARD}/tips`,
+      articles: `${ROOTS.DASHBOARD}/tips/articles`,
+      videos: `${ROOTS.DASHBOARD}/tips/videos`,
+    }
   },
 };

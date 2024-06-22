@@ -52,7 +52,16 @@ export const navData = [
       { title: 'Tratamento', path: paths.dashboard.treatment, icon: ICONS.kanban },
       { title: 'Agenda', path: paths.dashboard.calendar, icon: ICONS.calendar },
       { title: 'Comunidade', path: paths.dashboard.chat, icon: ICONS.chat },
-      { title: 'Bem estar', path: paths.dashboard.tips, icon: ICONS.course },
+      {
+        title: 'Dicas',
+        path: paths.dashboard.tips.root,
+        icon: ICONS.course,
+        children: [
+          { title: 'Chat IA', path: paths.dashboard.tips.root },
+          { title: 'Cuidados e Bem ester', path: paths.dashboard.tips.articles },
+          { title: 'Videos educativos', path: paths.dashboard.tips.videos },
+        ]
+      },
     ],
   },
 ];
