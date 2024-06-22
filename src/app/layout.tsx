@@ -6,6 +6,7 @@ import type { Viewport } from 'next';
 
 import { CONFIG } from 'src/config-global';
 import { primary } from 'src/theme/core/palette';
+import { LocalizationProvider } from 'src/locales ';
 import { ThemeProvider } from 'src/theme/theme-provider';
 import { getInitColorSchemeScript } from 'src/theme/color-scheme-script';
 
@@ -35,21 +36,22 @@ export default async function RootLayout({ children }: Props) {
     <html lang="en" suppressHydrationWarning>
       <body>
         {getInitColorSchemeScript}
-
-        <AuthProvider>
-          <SettingsProvider
-            settings={settings}
-            caches={CONFIG.isStaticExport ? 'localStorage' : 'cookie'}
-          >
-            <ThemeProvider>
-              <MotionLazy>
-                <ProgressBar />
-                <SettingsDrawer />
-                {children}
-              </MotionLazy>
-            </ThemeProvider>
-          </SettingsProvider>
-        </AuthProvider>
+        <LocalizationProvider>
+          <AuthProvider>
+            <SettingsProvider
+              settings={settings}
+              caches={CONFIG.isStaticExport ? 'localStorage' : 'cookie'}
+            >
+              <ThemeProvider>
+                <MotionLazy>
+                  <ProgressBar />
+                  <SettingsDrawer />
+                  {children}
+                </MotionLazy>
+              </ThemeProvider>
+            </SettingsProvider>
+          </AuthProvider>
+        </LocalizationProvider>
       </body>
     </html>
   );

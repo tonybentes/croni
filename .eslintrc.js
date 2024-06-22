@@ -105,5 +105,12 @@ module.exports = {
         'internal-pattern': ['src/**'],
       },
     ],
+    "import/no-extraneous-dependencies": [
+      "off", {
+        "devDependencies": false,
+        "optionalDependencies": false,
+        "peerDependencies": false
+      }
+    ]
   },
 };

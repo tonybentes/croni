@@ -1,11 +1,11 @@
 import { CONFIG } from 'src/config-global';
 
-import { BlankView } from 'src/sections/blank/view';
+import { CalendarView } from 'src/sections/calendar/view';
 
 // ----------------------------------------------------------------------
 
 export const metadata = { title: `Agenda | Dashboard - ${CONFIG.site.name}` };
 
 export default function Page() {
-  return <BlankView title="Agenda" />;
+  return <CalendarView />;
 }
