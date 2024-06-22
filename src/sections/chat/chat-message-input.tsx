@@ -121,7 +121,7 @@ export function ChatMessageInput({
         value={message}
         onKeyUp={handleSendMessage}
         onChange={handleChangeMessage}
-        placeholder="Type a message"
+        placeholder="Digite uma mensagem"
         disabled={disabled}
         startAdornment={
           <IconButton>

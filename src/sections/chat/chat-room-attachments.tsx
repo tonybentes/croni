@@ -27,7 +27,7 @@ export function ChatRoomAttachments({ attachments }: Props) {
     <Stack key={attachment.name + index} spacing={1.5} direction="row" alignItems="center">
       <FileThumbnail
         imageView
-        file={attachment.preview}
+        file={attachment.url}
         onDownload={() => console.info('DOWNLOAD')}
         slotProps={{ icon: { width: 24, height: 24 } }}
         sx={{ width: 40, height: 40, bgcolor: 'background.neutral' }}

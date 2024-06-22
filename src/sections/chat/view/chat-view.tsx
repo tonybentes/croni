@@ -19,11 +19,9 @@ import { useMockedUser } from 'src/auth/hooks';
 
 import { Layout } from '../layout';
 import { ChatNav } from '../chat-nav';
-import { ChatRoom } from '../chat-room';
 import { ChatMessageList } from '../chat-message-list';
 import { ChatMessageInput } from '../chat-message-input';
 import { ChatHeaderDetail } from '../chat-header-detail';
-import { ChatHeaderCompose } from '../chat-header-compose';
 import { useCollapseNav } from '../hooks/use-collapse-nav';
 
 // ----------------------------------------------------------------------
@@ -73,7 +71,7 @@ export function ChatView() {
       sx={{ display: 'flex', flex: '1 1 auto', flexDirection: 'column' }}
     >
       <Typography variant="h4" sx={{ mb: { xs: 3, md: 5 } }}>
-        Chat
+        Comunidade
       </Typography>
 
       <Layout
@@ -86,14 +84,12 @@ export function ChatView() {
           boxShadow: (theme) => theme.customShadows.card,
         }}
         slots={{
-          header: selectedConversationId ? (
+          header: selectedConversationId && (
             <ChatHeaderDetail
               collapseNav={roomNav}
               participants={participants}
               loading={conversationLoading}
             />
-          ) : (
-            <ChatHeaderCompose contacts={contacts} onAddRecipients={handleAddRecipients} />
           ),
           nav: (
             <ChatNav
@@ -115,8 +111,8 @@ export function ChatView() {
               ) : (
                 <EmptyContent
                   imgUrl={`${CONFIG.site.basePath}/assets/icons/empty/ic-chat-active.svg`}
-                  title="Good morning!"
-                  description="Write something awesome..."
+                  title="Bom dia!"
+                  description="Escreva algo incrível..."
                 />
               )}
 
@@ -127,14 +123,6 @@ export function ChatView() {
                 disabled={!recipients.length && !selectedConversationId}
               />
             </>
-          ),
-          details: selectedConversationId && (
-            <ChatRoom
-              collapseNav={roomNav}
-              participants={participants}
-              loading={conversationLoading}
-              messages={conversation?.messages ?? []}
-            />
           ),
         }}
       />

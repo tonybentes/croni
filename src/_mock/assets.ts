@@ -127,57 +127,57 @@ export const _emails = [
 // ----------------------------------------------------------------------
 
 export const _fullNames = [
-  `Jayvion Simon`,
-  `Lucian Obrien`,
-  `Deja Brady`,
-  `Harrison Stein`,
-  `Reece Chung`,
-  `Lainey Davidson`,
-  `Cristopher Cardenas`,
-  `Melanie Noble`,
-  `Chase Day`,
-  `Shawn Manning`,
-  `Soren Durham`,
-  `Cortez Herring`,
-  `Brycen Jimenez`,
-  `Giana Brandt`,
-  `Aspen Schmitt`,
-  `Colten Aguilar`,
-  `Angelique Morse`,
-  `Selina Boyer`,
-  `Lawson Bass`,
-  `Ariana Lang`,
-  `Amiah Pruitt`,
-  `Harold Mcgrath`,
-  `Esperanza Mcintyre`,
-  `Mireya Conner`,
+  `João Simão`,
+  `Lucas Oliveira`,
+  `Débora Braga`,
+  `Henrique Silva`,
+  `Rodrigo Cunha`,
+  `Larissa Duarte`,
+  `Cristiano Cardoso`,
+  `Mariana Nobre`,
+  `Caio Dias`,
+  `Sérgio Martins`,
+  `Samuel Duarte`,
+  `Carlos Henrique`,
+  `Bruno Jimenez`,
+  `Giovana Brandão`,
+  `Amanda Schmidt`,
+  `Colton Aguiar`,
+  `Angélica Moraes`,
+  `Selena Borges`,
+  `Lúcio Bastos`,
+  `Ariana Lange`,
+  `Aline Pereira`,
+  `Haroldo Magalhães`,
+  `Esperança Macedo`,
+  `Mirela Conceição`
 ];
 
 export const _firstNames = [
-  `Mossie`,
-  `David`,
-  `Ebba`,
-  `Chester`,
-  `Eula`,
-  `Jaren`,
-  `Boyd`,
-  `Brady`,
-  `Aida`,
-  `Anastasia`,
-  `Gregoria`,
-  `Julianne`,
+  `Moisés`,
+  `Davi`,
+  `Ema`,
+  `César`,
+  `Eulália`,
+  `Jair`,
+  `Bruno`,
+  `Bruno`,
+  `Aída`,
+  `Anastácia`,
+  `Gregória`,
+  `Juliana`,
   `Ila`,
-  `Elyssa`,
-  `Lucio`,
-  `Lewis`,
-  `Jacinthe`,
-  `Molly`,
-  `Brown`,
-  `Fritz`,
-  `Keon`,
-  `Ella`,
-  `Ken`,
-  `Whitney`,
+  `Elisa`,
+  `Lúcio`,
+  `Luís`,
+  `Jacinta`,
+  `Malu`,
+  `Bruno`,
+  `Fritz`,  // Fritz é um nome alemão que também pode ser usado no Brasil.
+  `Keon`,   // Keon pode ser um nome aceito no Brasil, mas não é comum.
+  `Ela`,
+  `Ken`,    // Ken pode ser um nome aceito no Brasil, mas não é comum.
+  `Whitney` // Whitney pode ser um nome aceito no Brasil, mas não é comum.
 ];
 
 export const _lastNames = [
@@ -642,6 +642,24 @@ export const _sentences = [
   `The artist dipped the brush into vibrant paint, bringing the canvas to life with bold strokes and vivid colors.`,
   `The laughter of children echoed through the playground, filling the atmosphere with pure joy.`,
 ];
+
+// ______________________________________________________________________
+
+export const _communityConversation = [
+  "Oi pessoal, como vocês estão se sentindo hoje? O sol lentamente se pôs no horizonte, pintando o céu com tons vibrantes de laranja e rosa. Me fez pensar na beleza das pequenas coisas, mesmo em dias difíceis.",
+  "Olá! Hoje foi um dia bom para mim. Eu caminhei pelo jardim e o perfume das flores desabrochando flutuava pelo jardim, criando um paraíso fragrante. Isso realmente levantou meu ânimo.",
+  "Que bom ouvir isso! Eu também tento encontrar alegria nas pequenas coisas. O aroma de café recém-preparado encheu o ar, despertando meus sentidos e me ajudando a começar o dia com mais energia.",
+  "Hoje eu passei um tempo com minha família. As crianças riam de alegria enquanto corriam pelos aspersores em um dia quente de verão. Ver a felicidade delas me deu uma sensação de paz.",
+  "Isso é maravilhoso. Eu adoro momentos assim. A risada das crianças ecoava pelo playground, enchendo a atmosfera de pura alegria. Esses momentos são preciosos.",
+  "Sim, com certeza. Ontem à noite, olhei para o céu noturno, maravilhando-me com as estrelas cintilantes que pontuavam a escuridão. Foi um momento de reflexão para mim.",
+  "Eu adoro essas noites tranquilas também. A delicada borboleta flutuava graciosamente de flor em flor, sugando néctar com sua esbelta probóscide. Isso me lembrou como a natureza é resiliente e bela.",
+  "Às vezes, gosto de assistir a um bom filme para me distrair. O ator fez uma atuação poderosa, emocionando o público às lágrimas com sua interpretação emocional. Isso me ajuda a lidar com as emoções.",
+  "Eu sei como é. Ler um bom livro também pode ser muito reconfortante. O livro me transportou para um mundo mágico, onde a imaginação não conhecia limites. É uma ótima forma de escapismo.",
+  "Ah, adoro isso também. E quando a chuva vem, o cheiro de chuva enche o ar enquanto nuvens escuras se reuniam no céu, prometendo uma refrescante pancada. É tão calmante.",
+  "Sim, a natureza tem uma maneira de nos confortar. Recentemente, visitei algumas ruínas antigas. As ruínas antigas se erguiam como um testemunho de uma civilização há muito desaparecida, sua grandiosidade ainda impressionante. Foi uma experiência quase espiritual.",
+  "Nossa, parece incrível. Eu não tenho muita energia ultimamente, mas tento aproveitar os pequenos prazeres. O aroma de biscoitos recém-assados encheu a cozinha, tentando a todos com seu cheiro irresistível. Pequenas alegrias como essa fazem a diferença."
+];
+
 
 // ----------------------------------------------------------------------
 
