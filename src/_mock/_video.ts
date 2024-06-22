@@ -172,7 +172,7 @@ const COMMENTS = [
 export const _videosPromise = async () => {
   const videosPromiseArray = await Promise.all(
     [...Array(7)].map(async (_, index) => {
-      const apiKey = "AIzaSyBA_jadtezQ9LgYd90AOuV6OcjL0EeBL5w";
+      const apiKey = process.env.API_KEY_GOOGLE;
       const videoId = _mock.videos(index).split("v=")[1];
       const url = `https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&id=${videoId}&key=${apiKey}`;
 
