@@ -2,6 +2,8 @@ import { AuthSplitLayout } from 'src/layouts/auth-split';
 
 import { GuestGuard } from 'src/auth/guard';
 
+import logoCroni from '../../../../assets/img/Croni.png';
+
 // ----------------------------------------------------------------------
 
 type Props = {
@@ -11,7 +13,7 @@ type Props = {
 export default function Layout({ children }: Props) {
   return (
     <GuestGuard>
-      <AuthSplitLayout section={{ title: 'Olá, bem vindo de volta' }}>{children}</AuthSplitLayout>
+      <AuthSplitLayout section={{ imgUrl: logoCroni.src }}>{children}</AuthSplitLayout>
     </GuestGuard>
   );
 }

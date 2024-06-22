@@ -4,6 +4,8 @@ import 'src/global.css';
 
 import type { Viewport } from 'next';
 
+import Head from 'next/head';
+
 import { CONFIG } from 'src/config-global';
 import { primary } from 'src/theme/core/palette';
 import { ThemeProvider } from 'src/theme/theme-provider';
@@ -32,7 +34,10 @@ export default async function RootLayout({ children }: Props) {
   const settings = CONFIG.isStaticExport ? defaultSettings : await detectSettings();
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning translate="no">
+      <Head>
+        <meta name="google" content="notranslate" />
+      </Head>
       <body>
         {getInitColorSchemeScript}
 

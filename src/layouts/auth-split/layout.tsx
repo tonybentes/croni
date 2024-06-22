@@ -27,7 +27,6 @@ export function AuthSplitLayout({ sx, section, children }: AuthSplitLayoutProps)
   const mobileNavOpen = useBoolean();
 
   const layoutQuery: Breakpoint = 'md';
-
   return (
     <LayoutSection
       headerSection={
@@ -66,7 +65,7 @@ export function AuthSplitLayout({ sx, section, children }: AuthSplitLayoutProps)
        *************************************** */
       sx={sx}
       cssVars={{
-        '--layout-auth-content-width': '420px',
+        '--layout-auth-content-width': '320px',
       }}
     >
       <Main layoutQuery={layoutQuery}>
