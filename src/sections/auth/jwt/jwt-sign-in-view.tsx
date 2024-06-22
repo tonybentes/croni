@@ -89,8 +89,6 @@ export function JwtSignInView() {
     </Stack>
   );
 
-  console.log({ methods });
-
   const closeAllModal = () => {
     setTypeModal({ createAccount: false, resetPassword: false });
   };

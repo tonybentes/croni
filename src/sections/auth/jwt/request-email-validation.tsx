@@ -26,7 +26,7 @@ interface formProps {
 }
 
 export function ValidateEmailForm({ openModal, toggleModal }: formProps) {
-  const [errorMsg, setErrorMsg] = useState('');
+  const [_errorMsg, setErrorMsg] = useState('');
   const sizeScreenMD = useResponsive('between', 'xs', 'md');
   const showAlert = useAlert();
 

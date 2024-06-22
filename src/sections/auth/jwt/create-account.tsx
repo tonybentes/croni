@@ -14,6 +14,7 @@ import { Box, Paper, Button, Typography } from '@mui/material';
 
 import { useRouter } from 'src/routes/hooks';
 
+import { useAlert } from 'src/hooks/use-alert';
 import { useBoolean } from 'src/hooks/use-boolean';
 import { useResponsive } from 'src/hooks/use-responsive';
 
@@ -53,6 +54,7 @@ export const SignInSchema = zod
 
 export function CreateAccount({ openModal, toggleModal }: formProps) {
   const router = useRouter();
+  const showAlert = useAlert();
 
   const [errorMsg, setErrorMsg] = useState('');
 
@@ -71,7 +73,10 @@ export function CreateAccount({ openModal, toggleModal }: formProps) {
   const onSubmit = handleSubmit(async (data) => {
     try {
       console.log(data);
-
+      showAlert(
+        `Enviamos um e-mail para ${data.email}. Clique no link do e-mail para concluir o cadastro.`,
+        'success'
+      );
       router.refresh();
     } catch (error) {
       console.error(error);
