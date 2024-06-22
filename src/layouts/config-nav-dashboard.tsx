@@ -46,30 +46,13 @@ export const navData = [
    * Overview
    */
   {
-    subheader: 'Overview 6.0.0',
+    subheader: 'Croni 1.0',
     items: [
+      { title: 'Diário', path: paths.dashboard.root, icon: ICONS.file },
+      { title: 'Tratamento', path: paths.dashboard.treatment, icon: ICONS.kanban },
+      { title: 'Agenda', path: paths.dashboard.calendar, icon: ICONS.calendar },
       { title: 'Comunidade', path: paths.dashboard.chat, icon: ICONS.chat },
-      { title: 'One', path: paths.dashboard.root, icon: ICONS.dashboard },
-      { title: 'Two', path: paths.dashboard.two, icon: ICONS.ecommerce },
-      { title: 'Three', path: paths.dashboard.three, icon: ICONS.analytics },
-    ],
-  },
-  /**
-   * Management
-   */
-  {
-    subheader: 'Management',
-    items: [
-      {
-        title: 'Group',
-        path: paths.dashboard.group.root,
-        icon: ICONS.user,
-        children: [
-          { title: 'Four', path: paths.dashboard.group.root },
-          { title: 'Five', path: paths.dashboard.group.five },
-          { title: 'Six', path: paths.dashboard.group.six },
-        ],
-      },
+      { title: 'Bem estar', path: paths.dashboard.tips, icon: ICONS.course },
     ],
   },
 ];
