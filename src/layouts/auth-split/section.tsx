@@ -76,10 +76,10 @@ export function Section({
           component="img"
           alt="Dashboard illustration"
           src={imgUrl}
-          sx={{ width: '80%', aspectRatio: '4/1.5', objectFit: 'cover', height: 'auto' }}
+          sx={{ width: '70%', aspectRatio: '4/1.5', objectFit: 'cover', height: 'auto' }}
         />
       </Box>
-      <div>
+      <Box sx={{ ml: 9 }}>
         {title && (
           <Typography variant="h3" sx={{ textAlign: 'center' }}>
             {title}
@@ -100,7 +100,7 @@ export function Section({
             {subtitle}
           </Typography>
         )}
-      </div>
+      </Box>
 
       {!!methods?.length && method && (
         <Box component="ul" gap={2} display="flex">
