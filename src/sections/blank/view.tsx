@@ -15,6 +15,7 @@ import { DashboardContent } from 'src/layouts/dashboard';
 import DiscreteSlider from 'src/components/slider/slider';
 import DefaultCard from 'src/components/card-content/card';
 import { ActionCard } from 'src/components/card-content/actions-card';
+import RadioGroupRating from 'src/components/Rating/RadioGroupRating';
 
 // ----------------------------------------------------------------------
 
@@ -55,6 +56,13 @@ export function BlankView({ title = 'Blank' }: Props) {
                 <Typography variant="h6">Não encontro meu sintoma</Typography>
                 <Typography variant="inherit">Observação e imagens</Typography>
                 <ActionCard handleActionCard={() => {}} />
+              </Box>
+            </Paper>
+            <Paper sx={styledPage.contextPaper} elevation={3}>
+              <Box sx={{ display: 'flex', gap: 1, flexDirection: 'column', alignItems: 'center' }}>
+                <Typography variant="h6">Sentimentos</Typography>
+                <Typography variant="inherit">Nos conte aqui como está o seu humor</Typography>
+                <RadioGroupRating />
               </Box>
             </Paper>
           </Box>
