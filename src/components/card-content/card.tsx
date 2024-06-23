@@ -18,12 +18,25 @@ export interface cardProps {
 }
 
 export default function DefaultCard({ arrayList, actionfetchingcard }: cardProps) {
+  const [selectedCardIndex, setSelectedCardIndex] = React.useState<number | null>(null);
+
+  const handleCardClick = (index: number, item: cardList) => {
+    setSelectedCardIndex(index);
+    actionfetchingcard(item);
+  };
+
   return (
     <Box sx={styledCard.container}>
       {arrayList.length > 0 &&
         arrayList.map((item: cardList, idx: number) => (
-          <Card sx={{ width: 200 }} key={idx}>
-            <CardActionArea onClick={() => actionfetchingcard(item)}>
+          <Card
+            sx={{
+              width: 200,
+              backgroundColor: selectedCardIndex === idx ? 'lightblue' : 'white',
+            }}
+            key={idx}
+          >
+            <CardActionArea onClick={() => handleCardClick(idx, item)}>
               <CardContent>
                 <Box sx={styledCard.contentCard}>
                   <Avatar alt="Remy Sharp" src={item.img} sx={{ width: 56, height: 56 }} />
