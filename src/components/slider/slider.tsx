@@ -29,12 +29,12 @@ export default function CustomMarks() {
 
   const handelAlert = (value: number) =>
     value === 2 ? (
-      <Alert security="info">
+      <Alert severity="warning">
         O meu sintoma é moderado. Ele atrapalha minhas atividades diárias. Não consigo ir trabalhar
         ou sair de casa. Mas ainda consigo comer, tomar banho e ir ao banheiro
       </Alert>
     ) : (
-      <Alert security="error">
+      <Alert severity="error">
         Meu sintoma é grave. Não consigo realizar atividades de higiene (tomar banho, ir ao
         banheiro...). comer dormir ou sair da cama por causa do que eu estou sentindo
       </Alert>
