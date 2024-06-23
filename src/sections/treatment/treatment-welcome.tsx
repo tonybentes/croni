@@ -49,6 +49,7 @@ export function TreatmentWelcome({ title, description, action, img, sx, ...other
           display: 'flex',
           flex: '1 1 auto',
           flexDirection: 'column',
+          gap: '4px',
           alignItems: { xs: 'center', md: 'flex-start' },
         }}
       >
@@ -56,18 +57,31 @@ export function TreatmentWelcome({ title, description, action, img, sx, ...other
           {title}
         </Typography>
 
-        <Typography variant="body1" sx={{ opacity: 0.64, maxWidth: 360, mb: 1 }}>
+        <Typography variant="body1" sx={{ opacity: 0.64, mb: 1 }}>
           {description}
         </Typography>
 
-        <Typography variant="body2" component="pre" sx={{ opacity: 0.9, maxWidth: 360}}>
+        <Typography
+          variant="body2"
+          component="pre"
+          sx={{ opacity: 0.9, textWrap: 'wrap', textAlign: 'justify' }}
+        >
           Passo 1 - Carregue os documentos entregues pelo seu médico.
         </Typography>
-        <Typography variant="body2" component="pre" sx={{ opacity: 0.9, maxWidth: 360 }}>
+        <Typography
+          variant="body2"
+          component="pre"
+          sx={{ opacity: 0.9, textWrap: 'wrap', textAlign: 'justify' }}
+        >
           Passo 2 - Aguarde enquando nossa inteligência artificial monta seu cronograma.
         </Typography>
-        <Typography variant="body2" component="pre" sx={{ opacity: 0.9, maxWidth: 360 }}>
-          Passo 3 - Agora você já possui uma linha do tempo com tudo que precisa, além de notificações e agenda automática.
+        <Typography
+          variant="body2"
+          component="pre"
+          sx={{ opacity: 0.9, textWrap: 'wrap', textAlign: 'justify' }}
+        >
+          Passo 3 - Agora você já possui uma linha do tempo com tudo que precisa, além de
+          notificações e agenda automática.
         </Typography>
       </Box>
 
