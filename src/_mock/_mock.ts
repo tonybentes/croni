@@ -39,12 +39,21 @@ import {
 
 const { assetURL } = CONFIG.site;
 
+const _tasks = [
+  "Marcar consulta de retorno",
+  "Tomar medicamentos",
+  "Monitorar sintomas",
+  "Beber bastante água",
+  "Alimentar-se de forma saudável",
+]
+
 export const _mock = {
   id: (index: number) => _id[index],
   time: (index: number) => fSub({ days: index, hours: index }),
   boolean: (index: number) => _booleans[index],
   role: (index: number) => _roles[index],
   // Text
+  tasks: (index: number) => _tasks[index],
   videos: (index: number) => _videos[index],
   courseNames: (index: number) => _courseNames[index],
   fileNames: (index: number) => _fileNames[index],
