@@ -12,6 +12,9 @@ import { RouterLink } from 'src/routes/components';
 import { CONFIG } from 'src/config-global';
 import { varAlpha, bgGradient } from 'src/theme/styles';
 
+import logoCroni from '../../assets/img/logoCroni.png';
+import backgroundImage from '../../assets/img/login-background-Image.png';
+
 // ----------------------------------------------------------------------
 
 type SectionProps = BoxProps & {
@@ -32,29 +35,27 @@ export function Section({
   method,
   layoutQuery,
   methods,
-  title = 'Manage the job',
+  title = undefined,
   imgUrl = `${CONFIG.site.basePath}/assets/illustrations/illustration-dashboard.webp`,
   subtitle = 'Saúde e Tecnologia para Pacientes com Câncer',
   ...other
 }: SectionProps) {
   const theme = useTheme();
-
   return (
     <Box
       sx={{
         ...bgGradient({
-          color: `0deg, ${varAlpha(theme.vars.palette.background.defaultChannel, 0.92)}, ${varAlpha(theme.vars.palette.background.defaultChannel, 0.92)}`,
-          imgUrl: `${CONFIG.site.basePath}/assets/background/background-3-blur.webp`,
+          color: `0deg, ${varAlpha(theme.vars.palette.background.defaultChannel, 0.1)}, ${varAlpha(theme.vars.palette.background.defaultChannel, 0.1)}`,
+          imgUrl: `${CONFIG.site.basePath}${backgroundImage.src}`,
         }),
         px: 3,
-        pb: 3,
+        pb: 4,
         width: 1,
-        maxWidth: 480,
+        maxWidth: '67%',
         display: 'none',
         position: 'relative',
-        pt: 'var(--layout-header-desktop-height)',
+        pt: 'var(--layout-header-desktop-height + 20vh)',
         [theme.breakpoints.up(layoutQuery)]: {
-          gap: 8,
           display: 'flex',
           alignItems: 'center',
           flexDirection: 'column',
@@ -64,24 +65,42 @@ export function Section({
       }}
       {...other}
     >
-      <div>
-        <Typography variant="h3" sx={{ textAlign: 'center' }}>
-          {title}
-        </Typography>
+      <Box sx={{ display: 'flex', gap: 3, justifyContent: 'center', alignItems: 'center' }}>
+        <Box
+          component="img"
+          alt="Dashboard illustration"
+          src={logoCroni.src}
+          sx={{ width: '100px', aspectRatio: '4/1', objectFit: 'cover', height: '150px' }}
+        />
+        <Box
+          component="img"
+          alt="Dashboard illustration"
+          src={imgUrl}
+          sx={{ width: '70%', aspectRatio: '4/1.5', objectFit: 'cover', height: 'auto' }}
+        />
+      </Box>
+      <Box sx={{ ml: 9 }}>
+        {title && (
+          <Typography variant="h3" sx={{ textAlign: 'center' }}>
+            {title}
+          </Typography>
+        )}
 
         {subtitle && (
-          <Typography sx={{ color: 'text.secondary', textAlign: 'center', mt: 2 }}>
+          <Typography
+            variant="h4"
+            sx={{
+              color: 'text.secondary',
+              textAlign: 'center',
+              mt: 2,
+              ml: 8,
+              width: '74%',
+            }}
+          >
             {subtitle}
           </Typography>
         )}
-      </div>
-
-      <Box
-        component="img"
-        alt="Dashboard illustration"
-        src={imgUrl}
-        sx={{ width: 1, aspectRatio: '4/3', objectFit: 'cover' }}
-      />
+      </Box>
 
       {!!methods?.length && method && (
         <Box component="ul" gap={2} display="flex">

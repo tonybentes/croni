@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 
+import { Button } from '@mui/material';
 import Alert from '@mui/material/Alert';
 import Stack from '@mui/material/Stack';
 import IconButton from '@mui/material/IconButton';
@@ -22,6 +23,9 @@ import { Form, Field } from 'src/components/hook-form';
 import { useAuthContext } from 'src/auth/hooks';
 import { signInWithPassword } from 'src/auth/context/jwt';
 
+import { CreateAccount } from './create-account';
+import { ValidateEmailForm } from './request-email-validation';
+
 // ----------------------------------------------------------------------
 
 export type SignInSchemaType = zod.infer<typeof SignInSchema>;
@@ -29,12 +33,12 @@ export type SignInSchemaType = zod.infer<typeof SignInSchema>;
 export const SignInSchema = zod.object({
   email: zod
     .string()
-    .min(1, { message: 'Email is required!' })
-    .email({ message: 'Email must be a valid email address!' }),
+    .min(1, { message: 'Email é Obrigatório!' })
+    .email({ message: 'Email precisa ter um formato válido!' }),
   password: zod
     .string()
-    .min(1, { message: 'Password is required!' })
-    .min(6, { message: 'Password must be at least 6 characters!' }),
+    .min(1, { message: 'Senha é obrigatória!' })
+    .min(6, { message: 'Senha precisa ter no mínimo 6 caracteres!' }),
 });
 
 // ----------------------------------------------------------------------
@@ -45,6 +49,10 @@ export function JwtSignInView() {
   const { checkUserSession } = useAuthContext();
 
   const [errorMsg, setErrorMsg] = useState('');
+  const [typeModal, setTypeModal] = useState<{ resetPassword: boolean; createAccount: boolean }>({
+    resetPassword: false,
+    createAccount: false,
+  });
 
   const password = useBoolean();
 
@@ -77,9 +85,13 @@ export function JwtSignInView() {
 
   const renderHead = (
     <Stack spacing={1.5} sx={{ mb: 5 }}>
-      <Typography variant="h5">Faça login em sua conta</Typography>
+      <Typography variant="h3">Bem-vindo</Typography>
     </Stack>
   );
+
+  const closeAllModal = () => {
+    setTypeModal({ createAccount: false, resetPassword: false });
+  };
 
   const renderForm = (
     <Stack spacing={3}>
@@ -102,11 +114,30 @@ export function JwtSignInView() {
             ),
           }}
         />
+        <Stack flexDirection="row" justifyContent="space-between">
+          <Button
+            variant="text"
+            onClick={() => setTypeModal({ createAccount: false, resetPassword: true })}
+            type="button"
+          >
+            <Typography variant="caption" sx={styledForm.typography}>
+              Esqueci minha senha
+            </Typography>
+          </Button>
+          <Button
+            variant="text"
+            onClick={() => setTypeModal({ createAccount: true, resetPassword: false })}
+          >
+            <Typography variant="caption" sx={styledForm.typography}>
+              Não tenho cadastro
+            </Typography>
+          </Button>
+        </Stack>
       </Stack>
 
       <LoadingButton
         fullWidth
-        color="inherit"
+        color="info"
         size="large"
         type="submit"
         variant="contained"
@@ -117,16 +148,9 @@ export function JwtSignInView() {
       </LoadingButton>
     </Stack>
   );
-
   return (
     <>
       {renderHead}
-
-      <Alert severity="info" sx={{ mb: 3 }}>
-        Use <strong>{defaultValues.email}</strong>
-        {' com a senha '}
-        <strong>{defaultValues.password}</strong>
-      </Alert>
 
       {!!errorMsg && (
         <Alert severity="error" sx={{ mb: 3 }}>
@@ -137,6 +161,15 @@ export function JwtSignInView() {
       <Form methods={methods} onSubmit={onSubmit}>
         {renderForm}
       </Form>
+      <ValidateEmailForm openModal={typeModal.resetPassword} toggleModal={closeAllModal} />
+      <CreateAccount openModal={typeModal.createAccount} toggleModal={closeAllModal} />
     </>
   );
 }
+
+export const styledForm = {
+  typography: {
+    color: '#919EAB',
+    '&:hover': { textDecoration: 'underline', cursor: 'pointer' },
+  },
+};
