@@ -3,7 +3,7 @@
 ## Links de Acesso
 
 - **Ambiente de Demonstração:** [https://croni-three.vercel.app](https://croni-three.vercel.app)
-
+![CRONI](./.github/capa.png)
 ## Installation
 
 **Using Yarn (Recommended)**
