@@ -18,6 +18,7 @@ import { useMockedUser } from "src/auth/hooks";
 import { ComponentBlock } from "../component-block";
 import { AnalyticsTasks } from "../analytics-tasks";
 import { TreatmentWelcome } from "../treatment-welcome";
+import { TreatmentToolbar } from "../treatment-toolbar";
 
 type TimelineType = {
   key: number;
@@ -135,6 +136,9 @@ export function TreatmentView() {
   return (
     <DashboardContent maxWidth="xl" sx={{ ...flexProps }}>
       <Grid container spacing={3}>
+        <Grid item xs={12} md={12}>
+          <TreatmentToolbar />
+        </Grid>
         <Grid item xs={12} md={12}>
           <TreatmentWelcome
             title={`Seja bem-vindo 🎉  \n ${user?.displayName}`}

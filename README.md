@@ -1,6 +1,8 @@
-## Prerequisites
+# Plataforma Croni
 
-- Node.js 20.x (Recommended)
+## Links de Acesso
+
+- **Ambiente de Demonstração:** [https://croni-three.vercel.app](https://croni-three.vercel.app)
 
 ## Installation
 
@@ -10,45 +12,43 @@
 yarn install
 yarn dev
 ```
+## Tecnologia
 
-**Using Npm**
+A Plataforma Croni é desenvolvida utilizando as seguintes tecnologias:
 
-```sh
-npm i
-npm run dev
-```
+- **Frontend:**
+  - **Nextjs:** Utilizado para construção da interface do usuário, proporcionando uma experiência interativa e responsiva.
+  - **Material UI:** Para estilização dos componentes, permitindo a criação de interfaces modernas e atraentes.
 
-## Build
+- **Estratégia de Mock:**
+  - Durante a fase inicial do MVP (Produto Mínimo Viável), utilizamos dados mockados para simular o comportamento real da aplicação. Isso nos permitiu desenvolver e testar funcionalidades sem a necessidade de integração imediata com sistemas externos.
 
-```sh
-yarn build
-# or
-npm run build
-```
+## Equipe
 
-## Mock server
+A Plataforma Croni é desenvolvida por uma equipe dedicada de profissionais:
 
-By default we provide demo data from : `https://api-dev-minimal-[version].vercel.app`
+- **Tony Desideri:** Desenvolvedor full-stack
+- **Lorena Silva:** Design Web
+- **Fernanda Maciel:** Desenvolvedora full-stack
+- **Valéria Almeida:** Enfermeira
+- **Walessa Almeida:** Psicóloga
 
-To set up your local server:
+## Problema
 
-- **Guide:** [https://docs.minimals.cc/mock-server](https://docs.minimals.cc/mock-server).
+O tratamento de pacientes com câncer é complexo e envolve o gerenciamento de um grande volume de informações, incluindo exames e medicações. Muitas vezes, isso resulta em falhas no processo e falta de informações cruciais para os médicos. Quanto mais precisas forem as informações fornecidas sobre o paciente, melhor será a condução do tratamento.
 
-- **Resource:** [Download](https://www.dropbox.com/sh/6ojn099upi105tf/AACpmlqrNUacwbBfVdtt2t6va?dl=0).
+## Solução
 
-## Full version
+A Plataforma Croni foi idealizada para apoiar pacientes com câncer, utilizando a tecnologia a seu favor. A solução proposta inclui:
 
-- Create React App ([migrate to CRA](https://docs.minimals.cc/migrate-to-cra/)).
-- Next.js
-- Vite.js
+- **Integração com prontuários eletrônicos existentes:** Facilita a gestão das informações dos pacientes.
+- **Ferramentas de IA:** Auxilia pacientes na compreensão e gestão de seus tratamentos.
+- **Dashboards detalhados:** Fornece aos médicos um histórico completo dos pacientes e visualizações de dados importantes.
+- **Gestão de protocolos e sintomas:** Organiza o fluxo de tratamento e monitora a resposta do paciente.
+- **Calendário e lembretes:** Integra com plataformas como Google Calendar para ajudar os pacientes a gerenciar suas datas e tratamentos.
+- **Educação e suporte:** Oferece vídeos educativos, chat com IA e comunicação direta com o serviço de saúde especializado.
+- **Comunidade:** Oferece uma rede de apoio aos pacientes.
 
-## Starter version
+- **Acompanhamento e Dashboard:** Fornece um detalhamento completo do tratamento dos pacientes. Contando com dashboards e fluxos de tratamento detalhados, além de ferramentas de IA, permite que o médico faça perguntas específicas sobre o paciente e obtenha respostas precisas e atualizadas.
 
-- To remove unnecessary components. This is a simplified version ([https://starter.minimals.cc/](https://starter.minimals.cc/))
-- Good to start a new project. You can copy components from the full version.
-- Make sure to install the dependencies exactly as compared to the full version.
-
----
-
-**NOTE:**
-_When copying folders remember to also copy hidden files like .env. This is important because .env files often contain environment variables that are crucial for the application to run correctly._
+Através dessas funcionalidades, a Plataforma Croni garante maior precisão no tratamento de pessoas com câncer, melhorando a comunicação e a gestão de informações entre pacientes e médicos.
