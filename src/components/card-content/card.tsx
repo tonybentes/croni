@@ -32,7 +32,10 @@ export default function DefaultCard({ arrayList, actionfetchingcard }: cardProps
           <Card
             sx={{
               width: 200,
-              backgroundColor: selectedCardIndex === idx ? 'lightblue' : 'white',
+              ...(selectedCardIndex === idx && {
+                border: '2px solid',
+                borderColor: 'primary.main',
+              }),
             }}
             key={idx}
           >
