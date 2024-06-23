@@ -43,7 +43,6 @@ export const paths = {
     calendar: `${ROOTS.DASHBOARD}/calendar`,
     chat: `${ROOTS.DASHBOARD}/chat`,
     tips: {
-      root: `${ROOTS.DASHBOARD}/tips`,
       articles: `${ROOTS.DASHBOARD}/tips/articles`,
       videos: `${ROOTS.DASHBOARD}/tips/videos`,
     }

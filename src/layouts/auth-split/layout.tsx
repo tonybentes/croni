@@ -67,7 +67,7 @@ export function AuthSplitLayout({ sx, section, children }: AuthSplitLayoutProps)
        *************************************** */
       sx={sx}
       cssVars={{
-        '--layout-auth-content-width': '320px',
+        '--layout-auth-content-width': '360px',
       }}
     >
       <Main layoutQuery={layoutQuery}>
@@ -90,17 +90,17 @@ export function AuthSplitLayout({ sx, section, children }: AuthSplitLayoutProps)
 
 export const styledContent = {
   container: {
-    borderTopLeftRadius: '20px',
-    borderBottomLeftRadius: '20px',
+    // borderTopLeftRadius: '20px',
+    // borderBottomLeftRadius: '20px',
     zIndex: 7,
     position: 'relative',
-    boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px;',
+    // boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px;',
   },
   containerMb: {
-    borderTopLeftRadius: '20px',
-    borderTopRightRadius: '20px',
+    // borderTopLeftRadius: '20px',
+    // borderTopRightRadius: '20px',
     zIndex: 7,
     position: 'relative',
-    boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px;',
+    // boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px;',
   },
 };

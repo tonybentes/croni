@@ -11,6 +11,7 @@ const icon = (name: string) => (
 );
 
 const ICONS = {
+  star: icon('ic-star'),
   job: icon('ic-job'),
   blog: icon('ic-blog'),
   chat: icon('ic-chat'),
@@ -54,10 +55,9 @@ export const navData = [
       { title: 'Comunidade', path: paths.dashboard.chat, icon: ICONS.chat },
       {
         title: 'Dicas',
-        path: paths.dashboard.tips.root,
+        path: paths.dashboard.tips.articles,
         icon: ICONS.course,
         children: [
-          { title: 'Chat IA', path: paths.dashboard.tips.root },
           { title: 'Cuidados e Bem ester', path: paths.dashboard.tips.articles },
           { title: 'Videos educativos', path: paths.dashboard.tips.videos },
         ]

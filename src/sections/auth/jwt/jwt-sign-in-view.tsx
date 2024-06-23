@@ -5,7 +5,6 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 
-import { Button } from '@mui/material';
 import Alert from '@mui/material/Alert';
 import Stack from '@mui/material/Stack';
 import IconButton from '@mui/material/IconButton';
@@ -85,7 +84,7 @@ export function JwtSignInView() {
 
   const renderHead = (
     <Stack spacing={1.5} sx={{ mb: 5 }}>
-      <Typography variant="h3">Bem-vindo</Typography>
+      <Typography variant="h3">Bem-vindo de volta</Typography>
     </Stack>
   );
 
@@ -114,7 +113,7 @@ export function JwtSignInView() {
             ),
           }}
         />
-        <Stack flexDirection="row" justifyContent="space-between">
+        {/* <Stack flexDirection="row" justifyContent="space-between">
           <Button
             variant="text"
             onClick={() => setTypeModal({ createAccount: false, resetPassword: true })}
@@ -132,12 +131,12 @@ export function JwtSignInView() {
               Não tenho cadastro
             </Typography>
           </Button>
-        </Stack>
+        </Stack> */}
       </Stack>
 
       <LoadingButton
         fullWidth
-        color="info"
+        color="inherit"
         size="large"
         type="submit"
         variant="contained"
@@ -157,6 +156,12 @@ export function JwtSignInView() {
           {errorMsg}
         </Alert>
       )}
+
+      <Alert severity="info" sx={{ mb: 3 }}>
+        Use o e-mail <strong>{defaultValues.email}</strong>
+        {' com a senha '}
+        <strong>{defaultValues.password}</strong>
+      </Alert>
 
       <Form methods={methods} onSubmit={onSubmit}>
         {renderForm}
