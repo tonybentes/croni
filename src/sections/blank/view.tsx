@@ -58,7 +58,7 @@ export function BlankView({ title = 'Blank' }: Props) {
                 <ActionCard handleActionCard={() => {}} />
               </Box>
             </Paper>
-            <Paper sx={styledPage.contextPaper} elevation={3}>
+            <Paper sx={{ ...styledPage.contextPaper, maxHeight: '237px' }} elevation={3}>
               <Box sx={{ display: 'flex', gap: 1, flexDirection: 'column', alignItems: 'center' }}>
                 <Typography variant="h6">Sentimentos</Typography>
                 <Typography variant="inherit">Nos conte aqui como está o seu humor</Typography>
