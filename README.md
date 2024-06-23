@@ -3,8 +3,17 @@
 ## Links de Acesso
 
 - **Ambiente de Demonstração:** [https://croni-three.vercel.app](https://croni-three.vercel.app)
+![CRONI](./.github/capa.png)
 
 ## Installation
+
+**Variáveis de ambiente**
+- Altere ad variáveis de ambiente
+```sh
+NEXT_PUBLIC_SERVER_URL=
+NEXT_PUBLIC_ASSET_URL=
+API_KEY_GOOGLE=
+```
 
 **Using Yarn (Recommended)**
 
