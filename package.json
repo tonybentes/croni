@@ -39,6 +39,7 @@
     "@fullcalendar/timeline": "^6.1.14",
     "@hookform/resolvers": "^3.6.0",
     "@iconify/react": "^5.0.1",
+    "@mui/icons-material": "^5.15.20",
     "@mui/lab": "^5.0.0-alpha.170",
     "@mui/material": "^5.15.20",
     "@mui/material-nextjs": "^5.15.11",
@@ -87,6 +88,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
     "@svgr/webpack": "^8.1.0",
     "@types/autosuggest-highlight": "^3.2.3",
     "@types/cors": "^2.8.17",
