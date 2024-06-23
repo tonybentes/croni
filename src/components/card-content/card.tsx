@@ -3,8 +3,9 @@ import * as React from 'react';
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
 import CardContent from '@mui/material/CardContent';
-import AddCircleIcon from '@mui/icons-material/AddCircle';
 import { Box, Avatar, CardActionArea } from '@mui/material';
+
+import { ActionCard } from './actions-card';
 
 export interface cardList {
   description: string;
@@ -34,20 +35,7 @@ export default function DefaultCard({ arrayList, actionfetchingcard }: cardProps
             </CardActionArea>
           </Card>
         ))}
-      <Card sx={{ width: 200 }}>
-        <CardActionArea>
-          <CardContent>
-            <Box sx={styledCard.contentCard}>
-              <Avatar sx={styledCard.avatar}>
-                <AddCircleIcon />
-              </Avatar>
-              <Typography variant="body2" color="text.secondary">
-                Adicionar
-              </Typography>
-            </Box>
-          </CardContent>
-        </CardActionArea>
-      </Card>
+      <ActionCard handleActionCard={() => {}} />
     </Box>
   );
 }
@@ -66,10 +54,5 @@ export const styledCard = {
     display: 'flex',
     alignItems: 'center',
     flexDirection: 'column',
-  },
-  avatar: {
-    width: 56,
-    height: 56,
-    bgcolor: '#009FF7',
   },
 };

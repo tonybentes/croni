@@ -5,6 +5,8 @@ import { Alert } from '@mui/material';
 import Slider from '@mui/material/Slider';
 import Typography from '@mui/material/Typography';
 
+import { useResponsive } from 'src/hooks/use-responsive';
+
 const MAX = 3;
 const MIN = 1;
 const marks = [
@@ -23,6 +25,7 @@ export default function CustomMarks() {
   const handleChange = (_: Event, newValue: number | number[]) => {
     setVal(newValue as number);
   };
+  const smDown = useResponsive('down', 'sm');
 
   const handelAlert = (value: number) =>
     value === 2 ? (
@@ -37,7 +40,7 @@ export default function CustomMarks() {
       </Alert>
     );
   return (
-    <Box sx={{ width: 340, display: 'flex', flexDirection: 'column', gap: 2 }}>
+    <Box sx={smDown ? styledSlider.containerMB : styledSlider.container}>
       <Box>
         <Slider
           marks={marks}
@@ -62,3 +65,18 @@ export default function CustomMarks() {
     </Box>
   );
 }
+
+export const styledSlider = {
+  container: {
+    width: 340,
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 2,
+  },
+  containerMB: {
+    width: 250,
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 2,
+  },
+};
