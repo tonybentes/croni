@@ -1,11 +1,10 @@
 import { CONFIG } from 'src/config-global';
 
-import { BlankView } from 'src/sections/blank/view';
+import { TreatmentView } from 'src/sections/treatment/view';
 
 // ----------------------------------------------------------------------
-
-export const metadata = { title: `Diário - ${CONFIG.site.name}` };
+export const metadata = { title: `Tratamento | Dashboard - ${CONFIG.site.name}` };
 
 export default function Page() {
-  return <BlankView title="Diário" />;
+  return <TreatmentView />;
 }

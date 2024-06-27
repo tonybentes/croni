@@ -39,7 +39,7 @@ export const paths = {
   // DASHBOARD
   dashboard: {
     root: ROOTS.DASHBOARD,
-    treatment: `${ROOTS.DASHBOARD}/treatment`,
+    daily: `${ROOTS.DASHBOARD}/daily`,
     calendar: `${ROOTS.DASHBOARD}/calendar`,
     chat: `${ROOTS.DASHBOARD}/chat`,
     tips: {

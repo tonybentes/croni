@@ -63,21 +63,18 @@ export function TreatmentWelcome({ title, description, action, img, sx, ...other
 
         <Typography
           variant="body2"
-          component="pre"
           sx={{ opacity: 0.9, textWrap: 'wrap', textAlign: 'justify' }}
         >
           Passo 1 - Carregue os documentos entregues pelo seu médico.
         </Typography>
         <Typography
           variant="body2"
-          component="pre"
           sx={{ opacity: 0.9, textWrap: 'wrap', textAlign: 'justify' }}
         >
           Passo 2 - Aguarde enquando nossa inteligência artificial monta seu cronograma.
         </Typography>
         <Typography
           variant="body2"
-          component="pre"
           sx={{ opacity: 0.9, textWrap: 'wrap', textAlign: 'justify' }}
         >
           Passo 3 - Agora você já possui uma linha do tempo com tudo que precisa, além de

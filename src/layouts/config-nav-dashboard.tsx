@@ -49,8 +49,8 @@ export const navData = [
   {
     subheader: 'Croni 1.0',
     items: [
-      { title: 'Diário', path: paths.dashboard.root, icon: ICONS.file },
-      { title: 'Tratamento', path: paths.dashboard.treatment, icon: ICONS.kanban },
+      { title: 'Tratamento', path: paths.dashboard.root, icon: ICONS.kanban },
+      { title: 'Diário', path: paths.dashboard.daily, icon: ICONS.file },
       { title: 'Agenda', path: paths.dashboard.calendar, icon: ICONS.calendar },
       { title: 'Comunidade', path: paths.dashboard.chat, icon: ICONS.chat },
       {
