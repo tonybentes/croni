@@ -39,7 +39,9 @@ export function BlankView({ title = 'Blank' }: Props) {
           border: (theme) => `dashed 1px ${theme.vars.palette.divider}`,
         }}
       >
-        <Typography variant="h6">Selecione seus sintomas</Typography>
+        <Typography variant="h6" sx={{ pb: 3 }}>
+          Selecione seus sintomas
+        </Typography>
         <DefaultCard arrayList={ListCard} actionfetchingcard={setCard} />
         {getCard && (
           <Box sx={styledPage.container}>
