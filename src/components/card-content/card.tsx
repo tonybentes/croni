@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import CardContent from '@mui/material/CardContent';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import { Box, Paper, Avatar, IconButton, CardActionArea } from '@mui/material';
+import { Box, Avatar, IconButton, CardActionArea } from '@mui/material';
 
 export interface cardList {
   description: string;
@@ -28,22 +28,22 @@ export default function DefaultCard({ arrayList, actionfetchingcard }: cardProps
   };
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow: 4,
     slidesToScroll: 4,
     autoplay: false,
     autoplaySpeed: 3000,
     cssEase: 'linear',
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1300,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
-          dots: true,
+          dots: false,
         },
       },
       {
@@ -51,6 +51,7 @@ export default function DefaultCard({ arrayList, actionfetchingcard }: cardProps
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
+          dots: false,
         },
       },
       {
@@ -58,13 +59,14 @@ export default function DefaultCard({ arrayList, actionfetchingcard }: cardProps
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          dots: false,
         },
       },
     ],
   };
 
   return (
-    <Paper sx={styledCard.container} elevation={3}>
+    <Box sx={styledCard.container}>
       <IconButton sx={styledCard.prevButton} onClick={() => sliderRef.current.slickPrev()}>
         <ArrowBackIosIcon />
       </IconButton>
@@ -105,15 +107,14 @@ export default function DefaultCard({ arrayList, actionfetchingcard }: cardProps
       <IconButton sx={styledCard.nextButton} onClick={() => sliderRef.current.slickNext()}>
         <ArrowForwardIosIcon />
       </IconButton>
-    </Paper>
+    </Box>
   );
 }
 
 export const styledCard = {
   container: {
-    width: '100%',
-    position: 'relative', // Para posicionar os botões sobre o carrossel
-    padding: '40px',
+    width: '80%',
+    position: 'relative',
   },
   contentCard: {
     display: 'flex',

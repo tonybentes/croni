@@ -9,6 +9,7 @@ import { useResponsive } from 'src/hooks/use-responsive';
 
 const MAX = 3;
 const MIN = 1;
+const HALF = 2;
 const marks = [
   {
     value: MIN,
@@ -56,8 +57,11 @@ export default function CustomMarks() {
           <Typography variant="body2" onClick={() => setVal(MIN)} sx={{ cursor: 'pointer' }}>
             {MIN}
           </Typography>
+          <Typography variant="body2" onClick={() => setVal(HALF)} sx={{ cursor: 'pointer' }}>
+            {HALF}
+          </Typography>
           <Typography variant="body2" onClick={() => setVal(MAX)} sx={{ cursor: 'pointer' }}>
-            {MAX} max
+            {MAX}
           </Typography>
         </Box>
       </Box>

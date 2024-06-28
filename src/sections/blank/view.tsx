@@ -5,8 +5,8 @@ import type { cardList } from 'src/components/card-content/card';
 import { useState } from 'react';
 
 import Box from '@mui/material/Box';
-import { Paper, Avatar } from '@mui/material';
 import Typography from '@mui/material/Typography';
+import { Paper, Avatar, TextField } from '@mui/material';
 
 import { varAlpha } from 'src/theme/styles';
 import { ListCard } from 'src/_mock/listCard';
@@ -14,7 +14,7 @@ import { DashboardContent } from 'src/layouts/dashboard';
 
 import DiscreteSlider from 'src/components/slider/slider';
 import DefaultCard from 'src/components/card-content/card';
-import { ActionCard } from 'src/components/card-content/actions-card';
+import { DefaultButton } from 'src/components/Button/default-button';
 import RadioGroupRating from 'src/components/Rating/RadioGroupRating';
 
 // ----------------------------------------------------------------------
@@ -39,12 +39,31 @@ export function BlankView({ title = 'Blank' }: Props) {
           border: (theme) => `dashed 1px ${theme.vars.palette.divider}`,
         }}
       >
-        <Typography variant="h6" sx={{ pb: 3 }}>
-          Selecione seus sintomas
-        </Typography>
-        <DefaultCard arrayList={ListCard} actionfetchingcard={setCard} />
+        <Box sx={styledPage.containerTitle}>
+          <Box sx={styledPage.contextTitle}>
+            <Typography variant="h6">Sintomas</Typography>
+            <Typography variant="subtitle2">Como você está se sentindo?</Typography>
+            <DefaultButton nameButton="Estou bem !" loading={false} size="large" />
+          </Box>
+          <DefaultCard arrayList={ListCard} actionfetchingcard={setCard} />
+        </Box>
         {getCard && (
           <Box sx={styledPage.container}>
+            <Paper
+              sx={{ ...styledPage.contextPaper, maxHeight: '237px', width: 300 }}
+              elevation={3}
+            >
+              <Box sx={{ display: 'flex', gap: 3, flexDirection: 'column' }}>
+                <Typography variant="h6">Observações</Typography>
+                <TextField
+                  id="outlined-textarea"
+                  label="Descreva o seu sintoma"
+                  multiline
+                  fullWidth
+                  rows={4}
+                />
+              </Box>
+            </Paper>
             <Paper sx={styledPage.contextPaper} elevation={3}>
               <Typography variant="h6">Selecione o nível do sintoma</Typography>
               <Box sx={styledPage.context}>
@@ -54,16 +73,11 @@ export function BlankView({ title = 'Blank' }: Props) {
               <DiscreteSlider />
             </Paper>
             <Paper sx={{ ...styledPage.contextPaper, maxHeight: '237px' }} elevation={3}>
-              <Box sx={{ display: 'flex', gap: 1, flexDirection: 'column', alignItems: 'center' }}>
-                <Typography variant="h6">Não encontro meu sintoma</Typography>
-                <Typography variant="inherit">Observação e imagens</Typography>
-                <ActionCard handleActionCard={() => {}} />
-              </Box>
-            </Paper>
-            <Paper sx={{ ...styledPage.contextPaper, maxHeight: '237px' }} elevation={3}>
-              <Box sx={{ display: 'flex', gap: 1, flexDirection: 'column', alignItems: 'center' }}>
-                <Typography variant="h6">Sentimentos</Typography>
-                <Typography variant="inherit">Nos conte aqui como está o seu humor</Typography>
+              <Box sx={{ display: 'flex', gap: 3, flexDirection: 'column', alignItems: 'center' }}>
+                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+                  <Typography variant="h6">Sentimentos</Typography>
+                  <Typography variant="inherit">Nos conte aqui como está o seu humor</Typography>
+                </Box>
                 <RadioGroupRating />
               </Box>
             </Paper>
@@ -92,5 +106,15 @@ export const styledPage = {
     display: 'flex',
     gap: 3,
     alignItems: 'center',
+  },
+  containerTitle: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    flexWrap: 'wrap',
+  },
+  contextTitle: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 2,
   },
 };
