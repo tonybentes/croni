@@ -8,6 +8,8 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { Paper, Avatar, TextField } from '@mui/material';
 
+import { useResponsive } from 'src/hooks/use-responsive';
+
 import { varAlpha } from 'src/theme/styles';
 import { ListCard } from 'src/_mock/listCard';
 import { DashboardContent } from 'src/layouts/dashboard';
@@ -17,6 +19,8 @@ import DefaultCard from 'src/components/card-content/card';
 import { DefaultButton } from 'src/components/Button/default-button';
 import RadioGroupRating from 'src/components/Rating/RadioGroupRating';
 
+import { styledPage } from './styles';
+
 // ----------------------------------------------------------------------
 
 type Props = {
@@ -25,6 +29,7 @@ type Props = {
 
 export function BlankView({ title = 'Blank' }: Props) {
   const [getCard, setCard] = useState<cardList | null>(null);
+  const smDown = useResponsive('between', 'xs', 'xl');
   return (
     <DashboardContent maxWidth="xl">
       <Typography variant="h4"> {title} </Typography>
@@ -45,7 +50,9 @@ export function BlankView({ title = 'Blank' }: Props) {
             <Typography variant="subtitle2">Como você está se sentindo?</Typography>
             <DefaultButton nameButton="Estou bem !" loading={false} size="large" />
           </Box>
-          <DefaultCard arrayList={ListCard} actionfetchingcard={setCard} />
+          <Box sx={{ width: !smDown ? '80%' : '100%', pt: !smDown ? 0 : 4 }}>
+            <DefaultCard arrayList={ListCard} actionfetchingcard={setCard} />
+          </Box>
         </Box>
         {getCard && (
           <Box sx={styledPage.container}>
@@ -87,34 +94,3 @@ export function BlankView({ title = 'Blank' }: Props) {
     </DashboardContent>
   );
 }
-
-export const styledPage = {
-  container: {
-    display: 'flex',
-    flexDirection: 'row',
-    gap: 3,
-    flexWrap: 'wrap',
-  },
-  contextPaper: {
-    mt: 4,
-    display: 'flex',
-    flexDirection: 'column',
-    gap: 3,
-    p: 2,
-  },
-  context: {
-    display: 'flex',
-    gap: 3,
-    alignItems: 'center',
-  },
-  containerTitle: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    flexWrap: 'wrap',
-  },
-  contextTitle: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: 2,
-  },
-};

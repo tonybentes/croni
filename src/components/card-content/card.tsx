@@ -40,14 +40,14 @@ export default function DefaultCard({ arrayList, actionfetchingcard }: cardProps
       {
         breakpoint: 1300,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 4,
           slidesToScroll: 1,
           infinite: true,
           dots: false,
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 900,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -113,7 +113,7 @@ export default function DefaultCard({ arrayList, actionfetchingcard }: cardProps
 
 export const styledCard = {
   container: {
-    width: '80%',
+    width: '100%',
     position: 'relative',
   },
   contentCard: {
@@ -124,14 +124,14 @@ export const styledCard = {
   prevButton: {
     position: 'absolute',
     top: '50%',
-    left: '1%',
+    left: '0.5%',
     transform: 'translateY(-50%)',
     zIndex: 1,
   },
   nextButton: {
     position: 'absolute',
     top: '50%',
-    right: '1%',
+    right: '0.5%',
     transform: 'translateY(-50%)',
     zIndex: 1,
   },
