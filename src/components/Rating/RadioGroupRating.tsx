@@ -55,8 +55,9 @@ function IconContainer(props: IconContainerProps) {
 }
 
 export default function RadioGroupRating() {
-  const [hover, setHover] = React.useState(-1);
+  const [hover, setHover] = React.useState(2);
   const [values, setValue] = React.useState<number | null>(0);
+  console.log({ hover });
 
   return (
     <>

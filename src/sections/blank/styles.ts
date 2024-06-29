@@ -25,6 +25,6 @@ export const styledPage = {
   contextTitle: {
     display: 'flex',
     flexDirection: 'column',
-    gap: 2,
+    gap: 4,
   },
 };

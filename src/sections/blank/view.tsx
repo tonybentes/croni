@@ -6,7 +6,11 @@ import { useState } from 'react';
 
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import { Paper, Avatar, TextField } from '@mui/material';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import { Paper, Avatar, TextField, IconButton } from '@mui/material';
+
+import { paths } from 'src/routes/paths';
+import { useRouter } from 'src/routes/hooks';
 
 import { useResponsive } from 'src/hooks/use-responsive';
 
@@ -20,22 +24,23 @@ import { DefaultButton } from 'src/components/Button/default-button';
 import RadioGroupRating from 'src/components/Rating/RadioGroupRating';
 
 import { styledPage } from './styles';
+import { TreatmentToolbar } from '../treatment/treatment-toolbar';
 
 // ----------------------------------------------------------------------
 
-type Props = {
+/* type Props = {
   title?: string;
 };
-
-export function BlankView({ title = 'Blank' }: Props) {
-  const [getCard, setCard] = useState<cardList | null>(null);
+ */
+export function BlankView() {
+  const [getCard, setCard] = useState<cardList | null>(ListCard[0]);
   const smDown = useResponsive('between', 'xs', 'xl');
+  const router = useRouter();
   return (
     <DashboardContent maxWidth="xl">
-      <Typography variant="h4"> {title} </Typography>
+      <TreatmentToolbar />
       <Box
         sx={{
-          mt: 5,
           p: 2,
           width: 1,
           height: 'auto',
@@ -46,9 +51,22 @@ export function BlankView({ title = 'Blank' }: Props) {
       >
         <Box sx={styledPage.containerTitle}>
           <Box sx={styledPage.contextTitle}>
-            <Typography variant="h6">Sintomas</Typography>
-            <Typography variant="subtitle2">Como você está se sentindo?</Typography>
-            <DefaultButton nameButton="Estou bem !" loading={false} size="large" />
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+              <IconButton onClick={() => router.push(paths.dashboard.root)} size="small">
+                <ArrowBackIosIcon sx={{ height: 24, width: 24 }} />
+              </IconButton>
+              <Box>
+                <Typography variant="h5">Sintomas</Typography>
+                <Typography variant="subtitle2">Como você está se sentindo?</Typography>
+              </Box>
+            </Box>
+            <DefaultButton
+              nameButton="Estou bem !"
+              loading={false}
+              size="large"
+              onClick={() => router.push(paths.dashboard.root)}
+              type="button"
+            />
           </Box>
           <Box sx={{ width: !smDown ? '80%' : '100%', pt: !smDown ? 0 : 4 }}>
             <DefaultCard arrayList={ListCard} actionfetchingcard={setCard} />
